@@ -1,7 +1,22 @@
 /* General Styles */
-* {
+:root {
+    --blue : rgb(7, 50, 66);
+    --blue-light : rgb(35, 102, 153, 0.1);
+    --blue-dark : rgb(7, 50, 66);
+    --brown : rgb(90, 65, 53);
+    --yellow : rgb(255, 255, 0, 1);
+    }
+    * {
+    margin : 0;
+    }
+    html, body {
+    height : 100%;
     margin : 0;
     padding : 0;
+    }
+
+* {
+    margin : 0;
     }
     
     body {
