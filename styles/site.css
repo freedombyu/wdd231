@@ -1,0 +1,189 @@
+/* General Styles */
+* {
+    margin : 0;
+    padding : 0;
+    }
+    
+    body {
+    line-height : 1.5;
+    font-family : 'Montserrat Alternates', sans-serif;
+    color : #333;
+    margin: 0;
+    }
+
+/* Header */
+header {
+    background-color : rgb(7, 50, 66);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+   
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+}
+
+
+h2 {
+    background-color : rgb(7, 50, 66);
+    font-size : 1.2rem;
+    padding : 1rem;
+    text-align : center;
+    }
+
+    h2 {
+    text-align : center;
+    background-color : rgb(7, 50, 66);
+    color : #fff;
+    margin-bottom : 0.5rem;
+    font-size : 1.1rem;
+    border-radius : 0.5rem 0.5rem 0 0;
+    padding : 0.5rem;
+    }
+
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color : rgb(7, 50, 66);
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2px;
+  }
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.coursework {
+    flex: 1;
+    width: 500px;  
+}
+
+/* Certificate Section */
+.certificate {
+    width: 100%;
+    text-align: center;
+}
+
+.filter-buttons {
+    margin-bottom: 10px;
+}
+
+.filter-btn {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #2c3e50;
+    background-color: #34495e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.course-item {
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #8e44ad;
+    color: white;
+}
+
+.course-item:hover {
+    background-color: #5e3370;
+}
+
+/* Footer */
+footer {
+    background-color : rgb(7, 50, 66);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
