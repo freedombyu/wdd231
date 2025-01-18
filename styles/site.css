@@ -38,12 +38,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 .profile-pic {
-    border-radius: 50%;
-    width: 50px;
+    border-radius: 60%;
+    width: 60px;
     height: 50px;
 }
 
