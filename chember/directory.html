@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of local businesses and organizations in Timbuktu.">
+    <meta name="author" content="Freedom Mukanza">
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/directory-thumbnail.png">
+    <meta property="og:url" content="https://chamber.org/directory">
+    <title>Chamber of Commerce Directory</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="data/members.json"></script>
+    <script src="script/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Chamber of Commerce</a>
+        </div> 
+        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <ul id="menu" class="menu">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>       
+    </header>
+    <main>
+        <div id="controls">
+            <input type="text" id="search" placeholder="Search by name or address" aria-label="Search Members">
+            <select id="filter" aria-label="Filter Membership">
+              <option value="0">All Memberships</option>
+              <option value="3">Gold</option>
+              <option value="2">Silver</option>
+              <option value="1">Member</option>
+            </select>
+          </div>      
+    
+        <h1>Our Members</h1>
+        <div class="view-toggle">
+          <button id="grid-view">Grid View</button>
+          <button id="list-view">List View</button>
+        </div>
+        <section id="members" class="grid"></section>
+      </main>
+
+    <footer>
+        <div class="container">
+            <p>Chamber of Commerce<br>
+                
+                <p>&copy;2025 Kensington Johannesburg 🌸 South Africa</p>
+                <p id="lastModified" class="highlight">Last Modified:</p>
+
+            <span> Chamber of Commerce | WDD231 Class Project </span></p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/freedom-mukanza-3ba282258"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/instagram.jpg" alt="Twitter"></a>
+                <a href="www.linkedin.com/in/freedom-mukanza-3ba282258"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+
+</html>
