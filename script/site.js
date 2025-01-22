@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', () => displayMembers(allMembers, membersContainer.className));
     filterDropdown.addEventListener('change', () => displayMembers(allMembers, membersContainer.className));
   
-    // Set the last modified date
-    document.getElementById('lastModified').textContent = document.lastModified;
+   // Set the last modified date
+   document.getElementById('lastModified').textContent = document.lastModified;
   
-    fetchMembers();
+   fetchMembers();
   });
   
