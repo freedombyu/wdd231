@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script defer src="script/weather.js"></script>
+    <script defer src="script/directory1.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="/chamber/directory.html" class="logo">Chamber of Commerce</a>
+            <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul id="menu" class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Welcome to Our Chamber">
+            <div class="hero-text">
+                <h1>Welcome to the Chamber of Commerce</h1>
+                <p>Your connection to local businesses and the community.</p>
+                <a href="join.html" class="cta">Join Us Today!</a>
+            </div>
+        </section>
+
+        <!-- Current Events -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <div id="events-content"></div>
+        </section>
+
+        <!-- Weather -->
+        <section class="weather">
+            <h2>Local Weather</h2>
+            <div id="weather-content"></div>
+        </section>
+
+        <!-- Member Spotlights -->
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

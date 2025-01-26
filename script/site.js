@@ -1,67 +1,56 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const membersContainer = document.getElementById('members');
-    const gridViewBtn = document.getElementById('grid-view');
-    const listViewBtn = document.getElementById('list-view');
-    const searchInput = document.getElementById('search');
-    const filterDropdown = document.getElementById('filter');
-  
-    let allMembers = [];
-  
-    async function fetchMembers() {
-      const response = await fetch('data/members.json');
-      allMembers = await response.json();
-      displayMembers(allMembers, 'grid');
-    }
-  
-    function displayMembers(members, viewType) {
-      membersContainer.className = viewType;
-      const filteredMembers = filterMembers(members);
-      membersContainer.innerHTML = filteredMembers
-        .sort((a, b) => a.membershipLevel - b.membershipLevel)
-        .map(member => `
-          <div class="member-card ${getMembershipClass(member.membershipLevel)}">
-            <img src="image/${member.image}" alt="${member.name}">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p><a href="${member.website}" target="_blank">Visit Website</a></p>
-            <p class="membership">${getMembershipText(member.membershipLevel)}</p>
-          </div>
-        `)
-        .join('');
-    }
-  
-    function filterMembers(members) {
-      const searchText = searchInput.value.toLowerCase();
-      const membershipFilter = parseInt(filterDropdown.value, 10);
-  
-      return members.filter(member => {
-        const matchesSearch =
-          member.name.toLowerCase().includes(searchText) ||
-          member.address.toLowerCase().includes(searchText);
-        const matchesFilter =
-          membershipFilter === 0 || member.membershipLevel === membershipFilter;
-  
-        return matchesSearch && matchesFilter;
-      });
-    }
-  
-    function getMembershipClass(level) {
-      return level === 3 ? 'gold' : level === 2 ? 'silver' : 'member';
-    }
-  
-    function getMembershipText(level) {
-      return level === 3 ? 'Gold Member' : level === 2 ? 'Silver Member' : 'Member';
-    }
-  
-    gridViewBtn.addEventListener('click', () => displayMembers(allMembers, 'grid'));
-    listViewBtn.addEventListener('click', () => displayMembers(allMembers, 'list'));
-  
-    searchInput.addEventListener('input', () => displayMembers(allMembers, membersContainer.className));
-    filterDropdown.addEventListener('change', () => displayMembers(allMembers, membersContainer.className));
-  
-   // Set the last modified date
-   document.getElementById('lastModified').textContent = document.lastModified;
-  
-   fetchMembers();
+document.addEventListener("DOMContentLoaded", () => {
+  // Dynamic Last Modified Date
+  const lastModified = document.getElementById("lastModified");
+  lastModified.textContent = `Last Modified: ${document.lastModified}`;
+
+  // Responsive Navigation
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("open");
   });
-  
+
+  // Courses Data
+  const courses = [
+      { code: "CSE 110", category: "CSE" },
+      { code: "WDD 130", category: "WDD" },
+      { code: "CSE 111", category: "CSE" },
+      { code: "CSE 210", category: "CSE" },
+      { code: "WDD 131", category: "WDD" },
+      { code: "WDD 231", category: "WDD" },
+  ];
+
+  // Populate Courses
+  const courseList = document.getElementById("course-list");
+  const certificateCourses = document.getElementById("certificate-courses");
+
+  courses.forEach(course => {
+      const li = document.createElement("li");
+      li.textContent = course.code;
+      courseList.appendChild(li);
+
+      const div = document.createElement("div");
+      div.classList.add("course-item");
+      div.textContent = course.code;
+      div.setAttribute("data-category", course.category);
+      certificateCourses.appendChild(div);
+  });
+
+  // Filter Courses
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+          const category = button.getAttribute("data-filter");
+          const courseItems = document.querySelectorAll(".course-item");
+
+          courseItems.forEach(item => {
+              if (category === "all" || item.getAttribute("data-category") === category) {
+                  item.style.display = "block";
+              } else {
+                  item.style.display = "none";
+              }
+          });
+      });
+  });
+});

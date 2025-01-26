@@ -16,11 +16,11 @@ body {
 /* Header styles */
 header {
     background-color: #005f73;
-      color: white;
-      padding: 1rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   #menu-toggle {
@@ -173,6 +173,67 @@ header .navigation a {
 
 #view-controls button:hover {
   background-color: #005fa3;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: #302f2f;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.hero .cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #f4b400;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.hero .cta:hover {
+  background: #ffcc00;
+}
+.events, .weather, .spotlight {
+  padding: 2rem;
+}
+.events ul {
+  list-style: disc;
+  margin-left: 2rem;
+}
+.weather #weather-container {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+
+.spotlights-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.spotlights-container div {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 /* Adjustments for Responsiveness */
