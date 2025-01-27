@@ -45,12 +45,39 @@ header .logo {
     text-decoration: none;
     color: white;
 }
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 50px;
+  margin-right: 10px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  background-color: #005f73;
+}
+
+.info div {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
 
 .menu li a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: background-color 0.2s;
+    padding: 1rem;
+    text-align: center;
   }
 
   .menu li a:hover,
@@ -193,6 +220,7 @@ header .navigation a {
   background: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 10px;
+  color: white;
 }
 .hero .cta {
   display: inline-block;
@@ -232,7 +260,7 @@ header .navigation a {
   background: #fff;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px  #005f73;
   text-align: center;
 }
 
@@ -263,8 +291,5 @@ header .navigation a {
   .menu.show {
     display: flex;
   }
-  .menu li a {
-    padding: 1rem;
-    text-align: center;
-  }
+  
 }

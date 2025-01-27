@@ -6,25 +6,21 @@
     <title>Directory - Chamber of Commerce</title>
     <meta name="description" content="Directory of local businesses.">
     <meta name="author" content="Freedom Mukanza">
-    <meta property="og:title" content="Chamber of Commerce Directory">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/chamber/image/Georg_Janny_Salon_im_Makartstil.jpg">
-    <meta property="og:url" content="https://chamber.org/lander">    
-    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
     <script defer src="script/weather.js"></script>
-    <script defer src="script/directory1.js"></script>
+    <script defer src="script/spotlights.js"></script>
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <a href="/chamber/directory.html" class="logo">Chamber of Commerce</a>
+        <div class="logo">
+            <img src="image/us-chamber-of-commerce-logo.png" alt="logo">
+        </div>    
             <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
             <ul id="menu" class="menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="directory.html">Discover</a></li>
+                <li><a href="/index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
                 <li><a href="join.html">Join</a></li>
             </ul>
         </div>
@@ -33,7 +29,7 @@
     <main class="container">
         <!-- Hero Section -->
         <section class="hero">
-            <img src="images/hero.jpg" alt="Welcome to Our Chamber">
+            <img src="image/chamber.jpg" alt="Welcome to Our Chamber">
             <div class="hero-text">
                 <h1>Welcome to the Chamber of Commerce</h1>
                 <p>Your connection to local businesses and the community.</p>
@@ -42,26 +38,33 @@
         </section>
 
         <!-- Current Events -->
-        <section class="events">
-            <h2>Upcoming Events</h2>
-            <div id="events-content"></div>
-        </section>
-
-        <!-- Weather -->
-        <section class="weather">
-            <h2>Local Weather</h2>
-            <div id="weather-content"></div>
+        <section class="info">
+            <div class="events">
+                <h2>Events</h2>
+                <p>Details about upcoming events.</p>
+            </div>
+            <div class="weather">
+                <h2>Current Weather</h2>
+                <p>75°F, Partly Cloudy<br>High: 85°F, Low: 52°F</p>
+            </div>
+            <div class="forecast">
+                <h2>Weather Forecast</h2>
+                <p>Today: 90°F<br>Wednesday: 89°F<br>Thursday: 68°F</p>
+            </div>
         </section>
 
         <!-- Member Spotlights -->
-        <section class="spotlights">
+        <section class="spotlight">
             <h2>Member Spotlights</h2>
-            <div id="spotlight-container" class="grid"></div>
+            <div class="spotlights-container">
+                <!-- Member cards will be dynamically added by JavaScript -->
+            </div>
         </section>
     </main>
-
     <footer>
-        <p>&copy; <span id="year"></span> Chamber of Commerce. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Chamber of Commerce. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 
