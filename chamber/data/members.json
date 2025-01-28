@@ -4,7 +4,7 @@
 	  "address": "264 Murray Road, Wadeville, Johannesburg",
 	  "phone": "+27 11 902 6893",
 	  "website": "https://lehle.co.za/",
-      "images": "/chamber/image/lehle.png",
+      "image": "../image/lehle.png",
 	  "membershipLevel": 3
 	},
 	{
@@ -12,7 +12,7 @@
 	  "address": "Unit 13 Robertville Industrial Park, 254 Nadine Street, Robertville",
 	  "phone": "+27 11 472 9500",
 	  "website": "https://edisonlebone.co.za/",
-	  "image": "/chember/image/edison.jpg",
+	  "image": "../image/edison.jpg",
 	  "membershipLevel": 2
 	},
 	{
@@ -20,7 +20,7 @@
 	  "address": "27 8th aveue, Orange Grove, Johannesburg",
 	  "phone": "+27 11 640 2102",
 	  "website": "https://brightstarsacademy.co.za",
-	  "image": "/chember/image/bright.png",
+	  "image": "../image/bright.png",
 	  "membershipLevel": 1
 	},
 	{
@@ -28,7 +28,7 @@
 	  "address": "36 Madison Street, Jeppestown, Johannesburg",
 	  "phone": "+27 11 614 6613",
 	  "website": "https://hersol.co.za",
-	  "image": "/chember/image/hersol_logo.png",
+	  "image": "../image/hersol_logo.png",
 	  "membershipLevel": 3
 	},
 	{
@@ -36,7 +36,7 @@
 	  "address": "20 Stubbs St, Randfontein, Johannesburg",
 	  "phone": "+27 01 745 5951 ",
 	  "website": "https://junotraxafrica.co.za",
-	  "image": "/chember/image/junotrax.jpg",
+	  "image": "../image/junotrax.jpg",
 	  "membershipLevel": 2
 	},
   {
@@ -44,7 +44,7 @@
     "address": "No.40, fifth Avenue, Bredell AH, Kempton Park",
     "phone": "+27 10 109 6564",
     "website": "https://www.rowe-oil.co.za",
-    "image": "/chember/image/rowe.png",
+    "image": "../image/rowe.png",
     "membership": 1
 },
 {
@@ -52,7 +52,7 @@
     "address": "190 Snapper Road, Wadeville, Gauteng",
     "phone": "987-654-3210",
     "website": "https://gzican.com",
-    "image": "/chember/image/gzi.png",
+    "image": "../image/gzi.png",
     "membership": 2
 }
   ]
