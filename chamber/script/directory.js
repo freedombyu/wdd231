@@ -29,6 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
         `)
         .join('');
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("firstName").textContent = params.get("firstName") || "N/A";
+      document.getElementById("lastName").textContent = params.get("lastName") || "N/A";
+      document.getElementById("email").textContent = params.get("email") || "N/A";
+      document.getElementById("mobile").textContent = params.get("mobile") || "N/A";
+      document.getElementById("business").textContent = params.get("business") || "N/A";
+      document.getElementById("timestamp").textContent = params.get("timestamp") || "N/A";
+  });
   
     function filterMembers(members) {
       const searchText = searchInput.value.toLowerCase();
@@ -58,6 +68,48 @@ document.addEventListener('DOMContentLoaded', () => {
   
     searchInput.addEventListener('input', () => displayMembers(allMembers, membersContainer.className));
     filterDropdown.addEventListener('change', () => displayMembers(allMembers, membersContainer.className));
+
+    // Mobile menu toggle functionality
+document.getElementById('menu-toggle').addEventListener('click', function() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('active');
+});
+
+// Membership Modal functionality
+const membershipCards = document.querySelectorAll('.card');
+membershipCards.forEach(card => {
+  card.addEventListener('click', function(event) {
+      const cardId = card.id;
+      const modalId = `${cardId}-modal`;
+      const modal = document.getElementById(modalId);
+      modal.style.display = 'flex';
+  });
+});
+
+// Close modals
+const modals = document.querySelectorAll('.modal');
+modals.forEach(modal => {
+  const closeBtn = modal.querySelector('.close');
+  closeBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+  });
+});
+
+// Close modals when clicking outside
+window.addEventListener('click', function(event) {
+  if (event.target.classList.contains('modal')) {
+      event.target.style.display = 'none';
+  }
+});
+function openModal(id) {
+  document.getElementById(id).style.display = 'flex';
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+    
+    // contact us
+
   
     // Set the last modified date
     document.getElementById('lastModified').textContent = document.lastModified;
