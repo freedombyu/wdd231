@@ -1,15 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership Application</title>
+    <title>Directory - Chamber of Commerce</title>
+    <meta name="description" content="Directory of local businesses.">
+    <meta name="author" content="Freedom Mukanza">
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/chamber/image/Georg_Janny_Salon_im_Makartstil.jpg">
+    <meta property="og:url" content="https://chamber.org/lander">    
+    <link rel="icon" href="image/favicon.ico">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/directory.css">
-    <script src="script/data/members.js"></script>
+    <script src="/chamber/data/members.json"></script>
     <script defer src="script/directory.js"></script>
 </head>
+
 <body>
+    <header>
+        <div class="container">
+            <a href="/index.html" class="logo">Chamber of Commerce</a>
+        </div> 
+        <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <ul id="menu" class="menu">
+          <li><a href="/chamber/index.html">Home</a></li>          
+          <li><a href="/chamber/index.html">Discover</a></li>       
+          <li><a href="join.html">Join</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+        </ul>       
+    </header>
     <div class="container">
         <section class="form-section">
             <h2>Membership Application Form</h2>
