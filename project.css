@@ -1,0 +1,67 @@
+/* Color Scheme */
+:root {
+    --primary-color: #1E4D2B; /* Dark Green */
+    --secondary-color: #E8F5E9; /* Light Green */
+    --accent-color: #FFC107; /* Amber */
+    --text-color: #333333; /* Dark Gray */
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: var(--accent-color);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--text-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Wireframe Styles */
+.wireframe {
+    border: 2px dashed var(--primary-color);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.wireframe img {
+    max-width: 100%;
+    height: auto;
+}
