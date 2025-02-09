@@ -53,6 +53,24 @@ document.addEventListener('DOMContentLoaded', () => {
       return level === 3 ? 'gold' : level === 2 ? 'silver' : 'member';
   }
 
+  const visitMessage = document.querySelector("#visit-message");
+const lastVisit = localStorage.getItem("lastVisit");
+const now = Date.now();
+
+if (!lastVisit) {
+    visitMessage.textContent = "Welcome! Let us know if you have any questions.";
+} else {
+    const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+    if (daysSinceLastVisit < 1) {
+        visitMessage.textContent = "Back so soon! Awesome!";
+    } else {
+        visitMessage.textContent = `You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? "day" : "days"} ago.`;
+    }
+}
+
+localStorage.setItem("lastVisit", now);
+
+
   // Get membership text based on level
   function getMembershipText(level) {
       return level === 3 ? 'Gold Member' : level === 2 ? 'Silver Member' : 'Member';

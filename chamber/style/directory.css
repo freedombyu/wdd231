@@ -323,6 +323,10 @@ h1 {
   text-align: center;
 }
 
+.sidebar {
+  grid-area: sidebar;
+}
+
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
   #menu-toggle {
@@ -407,6 +411,38 @@ input[type="submit"]:hover {
   width: 250px;
   transition: transform 0.3s ease-in-out;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.card img:hover {
+  transform: scale(1.05);
+}
+
+.card button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
 .card:hover {
   transform: scale(1.05);
 }
