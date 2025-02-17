@@ -36,6 +36,22 @@ header .logo img {
   margin-right: 10px;
 }
 
+
+.view-toggle button {
+  margin: 5px;
+  padding: 10px 20px;
+}
+
+#directory-container.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+#directory-container.list-view {
+  display: block;
+}
+
 /* Navigation Menu */
 #menu-toggle {
   display: none;
@@ -57,7 +73,7 @@ header .logo img {
 .menu li a {
   color: white;
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   transition: background-color 0.2s;
 }

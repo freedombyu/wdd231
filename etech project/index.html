@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E Tech Solution - IT Services for businesses. Explore our services, blog, and contact us.">
+    <meta property="og:title" content="E Tech Solution">
+    <meta property="og:description" content="Providing top-notch IT solutions and tech insights.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>E Tech Solution</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/etech.js"></script>
+    <script defer src="script/weather.js"></script>
+    <script defer src="/etech project/data/services.json"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+</head>
+<body>
+    <header>
+        <nav> 
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>      
+            <ul>
+                <li><a href="#">E Teck Solution</a></li>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="services.html">Services</a></li>
+                <li class="hideOnMobile"><a href="blog.html">Blog</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <li class=menu-button onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="video-container">
+                <video autoplay muted loop playsinline id="bg-video">
+                    <source src="../etech project/videos/corporate video for IT company _ corporate video for Perfectial (1).mp4 project/image/" type="video/mp4">
+                    <source src="/etech project/videos/4K 100% Royalty-Free Stock Footage _ Technology HUD Element Intro Background _ No Copyright Video.mp4" type="video/webm">
+                    <img src="image/img.jpg" alt="Tech Background">
+                </video>
+            </div>
+        
+            <div class="hero-content">
+                <div class="text-content">
+                    <h1 class="scroll-reveal fade-up">Welcome to E Tech Solution</h1>
+                    <p class="scroll-reveal fade-up delay">
+                        Your trusted IT services provider, delivering innovative and reliable solutions 
+                        for businesses and individuals. We specialize in web development, cybersecurity, 
+                        cloud computing, and IT consulting.
+                    </p>
+                    
+                    <a href="contact.html" class="floating-cta">Get Started</a>
+                </div>
+                <div class="image-content">
+                    <img src="image/hero_img.jpg" alt="Tech Team at Work" loading="lazy" class="scroll-reveal zoom-in">
+                </div>
+            </div>
+        </section>
+        <section class="info">
+            <div class="events">
+                <h2>Events</h2>
+                <p>Details about upcoming events.</p>
+            </div>
+            <div class="weather">
+                <h2>Current Weather</h2>
+                <p>75°F, Partly Cloudy<br>High: 85°F, Low: 52°F</p>
+            </div>
+            <div class="forecast">
+                <h2>Weather Forecast</h2>
+                <p>Today: 90°F<br>Wednesday: 89°F<br>Thursday: 68°F</p>
+            </div>
+        </section>
+        
+       
+        <div class="tech-images">
+            <img src="image/Artificial_Intelligence.jpeg" alt="Artificial Intelligence" class="scroll-reveal fade-up">
+            <img src="image/Cybersecurity_Protection.jpg" alt="Cybersecurity Protection" class="scroll-reveal fade-up">
+            <img src="image/cloud_computing.jpg" alt="Cloud Computing Solutions" class="scroll-reveal fade-up">
+        </div>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have any questions? Reach out to us!</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> support@etechsolution.com</p>
+                <p><strong>Phone:</strong> +277 8088 6447</p>
+                <p><strong>Address:</strong> 3 Derby Road, Kensington City</p>
+            </div>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="First Name" required>
+                <input type="text" name="name" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn-hover">Send</button>
+            </form>
+        </section>      
+    </section>            
+    </main>
+    <footer>
+        <div class="footer-content">
+           
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>          
+
+        <p>&copy;2025 Kensington Johannesburg 🌸 South Africa</p>
+        <p id="lastModified" class="highlight">Last Modified:</p>
+            <div class="icons">
+              <a href="#"><ion-icon name=logo-facebook></ion-icon></a>
+              <a href="#"><ion-icon name=logo-instagram></ion-icon></a>
+              <a href="#"><ion-icon name=logo-linkedin></ion-icon></a>
+              <a href="#"><ion-icon name=logo-WhatSapp></ion-icon></a>
+          </div>
+        </div>
+    </footer>    
+</body>
+</html>
