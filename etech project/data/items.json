@@ -1,0 +1,107 @@
+[
+    {
+        "title": "Wireless Keyboard",
+        "description": "Ergonomic wireless keyboard with long battery life.",
+        "category": "Accessories",
+        "price": "$39.99",
+        "image": "image/RGB_mechanical_keyboard.jpeg"
+    },
+    {
+        "title": "MOOVE 55 Silence Headphones",
+        "description": "MOOVE-55-Silence_Front-Box-R-with-Background.",
+        "category": "Audio",
+        "price": "$199.99",
+        "image": "image/MOOVE-55-Silence.webp"
+    },
+    {
+        "title": "Smartphone Stand",
+        "description": "Adjustable aluminum stand for smartphones and tablets.",
+        "category": "Accessories",
+        "price": "$19.99",
+        "image": "image/s-pdpxl.file-271.jpg"
+    },
+    {
+        "title": "Portable Bluetooth Speaker",
+        "description": "Compact and waterproof speaker with powerful sound.",
+        "category": "Audio",
+        "price": "$89.99",
+        "image": "image/Bluetooth_Speaker.jpg"
+    },
+    {
+        "title": "USB-C Hub",
+        "description": "7-in-1 hub with HDMI, USB-A, and SD card reader.",
+        "category": "Accessories",
+        "price": "$49.99",
+        "image": "image/USB-C Hub.webp"
+    },
+    {
+        "title": "Wireless Mouse",
+        "description": "Ultra-light wireless mouse with precision tracking.",
+        "category": "Accessories",
+        "price": "$29.99",
+        "image": "image/Wireless Mouse.webp"
+    },
+    {
+        "title": "Gaming Monitor",
+        "description": "27-inch 144Hz gaming monitor with ultra-low latency.",
+        "category": "Displays",
+        "price": "$299.99",
+        "image": "image/Gaming_Monitor.jpg"
+    },
+    {
+        "title": "External SSD Drive",
+        "description": "128TB high-speed external SSD for fast data transfer.",
+        "category": "Storage",
+        "price": "$129.99",
+        "image": "image/external_ssd.jpeg"
+    },
+    {
+        "title": "Veigar Keyboard",
+        "description": "RGB mechanical keyboard with customizable keys.",
+        "category": "Accessories",
+        "price": "$109.99",
+        "image": "image/veigar_keyboard.jpg"
+    },
+    {
+        "title": "Smartwatch",
+        "description": "Fitness tracking smartwatch with heart rate monitor.",
+        "category": "Wearables",
+        "price": "$149.99",
+        "image": "image/Monitor-Fitness-Tracker.avif"
+    },
+    {
+        "title": "Laptop Cooling Pad",
+        "description": "Cooling pad with adjustable fan speeds for laptops.",
+        "category": "Accessories",
+        "price": "$34.99",
+        "image": "image/Laptop_Cooling_Pad.jpg"
+    },
+    {
+        "title": "Wireless Charging Pad",
+        "description": "Fast wireless charger for smartphones and accessories.",
+        "category": "Accessories",
+        "price": "$24.99",
+        "image": "image/wireless_charger.jpg"
+    },
+    {
+        "title": "Action Camera",
+        "description": "4K waterproof action camera with image stabilization.",
+        "category": "Cameras",
+        "price": "$179.99",
+        "image": "image/action_camera.jpg"
+    },
+    {
+        "title": "Smart Home Assistant",
+        "description": "Voice-controlled smart speaker for home automation.",
+        "category": "Smart Home",
+        "price": "$99.99",
+        "image": "image/Smart_Home_Assistant.jpg"
+    },
+    {
+        "title": "Ergonomic Office Chair",
+        "description": "Comfortable and adjustable office chair with lumbar support.",
+        "category": "Furniture",
+        "price": "$249.99",
+        "image": "image/Ergonomic_Office_Chair.jpeg"
+    }
+]

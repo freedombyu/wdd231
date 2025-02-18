@@ -92,42 +92,75 @@ async function loadServices() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", loadServices);
+document.addEventListener("DOMContentLoaded", async function () {
+    const container = document.getElementById("items-container");
+    const modal = document.getElementById("modal");
+    const closeModal = document.querySelector(".close-btn");
+    
+    async function fetchData() {
+        try {
+            const response = await fetch("data/items.json"); // Fetch JSON data
+            if (!response.ok) {
+                throw new Error("Failed to fetch data");
+            }
+            const data = await response.json();
+            displayItems(data);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            container.innerHTML = "<p>Failed to load data. Please try again later.</p>";
+        }
+    }
 
-async function getChatbotResponse(userInput) {
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer YOUR_OPENAI_API_KEY"
-        },
-        body: JSON.stringify({
-            model: "gpt-3.5-turbo",
-            messages: [{ role: "user", content: userInput }]
-        })
+    function displayItems(items) {
+        container.innerHTML = "";
+        items.forEach((item, index) => {
+            const card = document.createElement("div");
+            card.classList.add("item-card");
+            card.innerHTML = `
+                <img src="${item.image}" alt="${item.title}" loading="lazy">
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+                <p><strong>Category:</strong> ${item.category}</p>
+                <button class="view-more" data-index="${index}">View More</button>
+            `;
+            container.appendChild(card);
+        });
+        attachModalListeners(items);
+    }
+
+    function attachModalListeners(items) {
+        document.querySelectorAll(".view-more").forEach(button => {
+            button.addEventListener("click", function () {
+                const index = this.dataset.index;
+                openModal(items[index]);
+            });
+        });
+    }
+
+    function openModal(item) {
+        document.getElementById("modal-title").textContent = item.title;
+        document.getElementById("modal-image").src = item.image;
+        document.getElementById("modal-image").alt = item.title;
+        document.getElementById("modal-description").textContent = item.description;
+        document.getElementById("modal-category").textContent = item.category;
+        document.getElementById("modal-price").textContent = item.price;
+        modal.style.display = "block";
+    }
+
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
     });
 
-    const data = await response.json();
-    document.getElementById("chatbot-response").innerText = data.choices[0].message.content;
-}
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 
-document.getElementById("chatbot-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    const userInput = document.getElementById("chatbot-input").value;
-    getChatbotResponse(userInput);
-});
-const toggleDarkMode = () => {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.getItem("darkMode") === "true") {
-        document.body.classList.add("dark-mode");
-    }
+    await fetchData();
 });
 
-document.getElementById("dark-mode-toggle").addEventListener("click", toggleDarkMode);
+
 
 
 
