@@ -69,7 +69,7 @@ if (weatherSection) {
 const contentSection = document.querySelector('.info .events');
 
 const contentList = [
-    { name: 'Your trusted IT services provider, delivering innovative and reliable solutions for businesses and individuals. We specialize in web development, cybersecurity, cloud computing, and IT consulting.'},
+    { name: 'The world of technology is evolving rapidly, and businesses need cutting-edge IT solutions to stay ahead. At E Tech Solution, we leverage the latest advancements in artificial intelligence,blockchain, IoT, and machine learning to help companies enhance productivity, security, and efficiency. Whether you need a robust IT,infrastructure, secure network solutions, or cloud-based applications, our experienced professionals are here to guide you through the digital transformation.'},     
     
 ];
 
