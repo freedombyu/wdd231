@@ -113,12 +113,7 @@ nav li:first-child{
 .services-preview, .blog-preview {
     padding: 20px;
 }
-.icons a {
-    margin: 5px;
-    text-decoration: none;
-    font-size: 24px;
-    color: #f9f7f7;
-}
+
 
 .nav-links a:hover {
     color: #00FF7F;
@@ -684,38 +679,98 @@ h1 {
 
 
 /* Footer */
-footer {
-    background-color: #0A192F;
-    color: #F8F9FA;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
+* footer{
+    font-size: 16px;
+    color: white;
 }
 
-.footer-content {
-    max-width: 1100px;
+footer{
+    background:  #007BFF;
+    padding-top: 50px;
+}
+.container{
+    width: 1140px;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
 }
-
-.footer-links {
-    list-style: none;
+.footer-content{
+    width: 33.3%;
+}
+h3{
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.footer-content p{
+    width:190px;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
+}
+.list{
     padding: 0;
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
 }
-
-.footer-links a {
+.list li{
+    width: auto;
+    text-align: center;
+    list-style-type:none;
+    padding: 7px;
+    position: relative;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i{
+    color: white;
+    font-size: 50px;
+}
+a{
+    margin: 5px;
     text-decoration: none;
-    color: #00FF7F;
-    transition: color 0.3s;
+    font-size: 16px;
+    color: #f9f7f7;
 }
 
-.footer-links a:hover {
-    color: #007BFF;
+a:hover{
+    color: #f18930;
+}
+.social-icons i:hover{
+    color: #f18930;
+}
+.bottom-bar{
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
 }
 
 /* Responsive Design */
